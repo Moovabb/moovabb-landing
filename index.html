@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moovabb - Ton profil locataire fiable</title>
   <link href="./dist/output.css" rel="stylesheet">
+  <script src="./script.js" defer></script>
 </head>
 
 <body class="bg-[#FAFCFF] font-[Helvetica,sans-serif]">
@@ -14,7 +15,9 @@
     <div class="w-full max-w-275 mx-auto relative px-4">
       <div
         class="bg-[#ea6363] flex items-center w-max absolute h-24 md:h-32 -top-1 md:-top-2 left-4 md:left-20 rounded-br-[15px] rounded-bl-[15px] md:rounded-br-[20px] md:rounded-bl-[20px] px-3 md:px-4 py-2 md:py-2.5 shadow-md -rotate-3 md:-rotate-4">
-        <img src="./assets/logo.png" alt="Moovabb Logo" class="h-16 md:h-20">
+        <a href="./index.html">
+          <img src="./assets/logo.png" alt="Moovabb Logo" class="h-16 md:h-20">
+        </a>
       </div>
     </div>
   </nav>
@@ -52,14 +55,14 @@
         autres dossiers.
       </p>
 
-      <button
-        class="bg-[#EA6363] text-white font-bold text-[14px] md:text-[15px] lg:text-[16px] px-6 md:px-8 py-3 w-full md:w-auto md:max-w-50 lg:w-37.5 lg:h-12.5 rounded-[10px] shadow-md hover:bg-[#d85555] transition">
+      <button id="hero-cta"
+        class="cursor-pointer bg-[#EA6363] text-white font-bold text-[14px] md:text-[15px] lg:text-[16px] px-6 md:px-8 py-3 w-full md:w-auto md:max-w-50 lg:w-37.5 lg:h-12.5 rounded-[10px] shadow-md hover:bg-[#d85555] transition">
         En savoir +
       </button>
     </section>
 
     <!-- Offers Section -->
-    <section
+    <section id="offers"
       class="flex justify-center items-center relative min-h-120 md:min-h-120 lg:h-120 bg-[#8AB2F5] rounded-[20px] md:rounded-[30px] lg:rounded-[40px] shadow-xl lg:min-w-275">
 
       <div class="py-8 md:py-10 lg:py-12 px-4 md:px-6 w-full max-w-275">
@@ -83,10 +86,10 @@
                 class="text-white font-bold text-[28px] md:text-[36px] lg:text-[45px] lg:leading-[1.01] tracking-[-0.07em]">
                 4,90€
               </p>
-              <button
-                class="bg-[#EA6363] text-white font-bold text-[13px] md:text-[14px] px-4 md:px-6 py-2.5 md:py-3 rounded-[10px] shadow-md hover:bg-[#d85555] transition whitespace-nowrap">
+              <a href="./contact.html"
+                class="bg-[#EA6363] text-white font-bold text-[13px] md:text-[14px] px-4 md:px-6 py-2.5 md:py-3 rounded-[10px] shadow-md hover:bg-[#d85555] transition whitespace-nowrap inline-flex items-center justify-center">
                 En savoir +
-              </button>
+              </a>
             </div>
           </div>
 
@@ -104,10 +107,10 @@
                 class="text-[#1F63BF] font-bold text-[28px] md:text-[36px] lg:text-[45px] lg:leading-[1.01] tracking-[-0.07em]">
                 11,90€
               </p>
-              <button
-                class="bg-[#EA6363] text-white font-bold text-[13px] md:text-[14px] px-4 md:px-6 py-2.5 md:py-3 rounded-[10px] shadow-md hover:bg-[#d85555] transition whitespace-nowrap">
+              <a href="./contact.html"
+                class="bg-[#EA6363] text-white font-bold text-[13px] md:text-[14px] px-4 md:px-6 py-2.5 md:py-3 rounded-[10px] shadow-md hover:bg-[#d85555] transition whitespace-nowrap inline-flex items-center justify-center">
                 En savoir +
-              </button>
+              </a>
 
             </div>
           </div>
@@ -126,10 +129,10 @@
                 class="text-white font-bold text-[28px] md:text-[36px] lg:text-[45px] lg:leading-[1.01] tracking-[-0.07em]">
                 19,90€
               </p>
-              <button
-                class="bg-[#EA6363] text-white font-bold text-[13px] md:text-[14px] px-4 md:px-6 py-2.5 md:py-3 rounded-[10px] shadow-md hover:bg-[#d85555] transition whitespace-nowrap">
+              <a href="./contact.html"
+                class="bg-[#EA6363] text-white font-bold text-[13px] md:text-[14px] px-4 md:px-6 py-2.5 md:py-3 rounded-[10px] shadow-md hover:bg-[#d85555] transition whitespace-nowrap inline-flex items-center justify-center">
                 En savoir +
-              </button>
+              </a>
             </div>
           </div>
         </div>

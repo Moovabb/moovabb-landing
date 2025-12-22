@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moovabb - Contactez-nous</title>
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-[#FAFCFF] font-[Helvetica,sans-serif]">
+  <!-- Navbar -->
+  <nav class="bg-[#1f63bf] h-16 md:h-20 shadow-md flex items-start">
+    <div class="w-full max-w-275 mx-auto relative px-4">
+      <div
+        class="bg-[#ea6363] flex items-center w-max absolute h-24 md:h-32 -top-1 md:-top-2 left-4 md:left-20 rounded-br-[15px] rounded-bl-[15px] md:rounded-br-[20px] md:rounded-bl-[20px] px-3 md:px-4 py-2 md:py-2.5 shadow-md -rotate-3 md:-rotate-4">
+        <a href="./index.html">
+          <img src="./assets/logo.png" alt="Moovabb Logo" class="h-16 md:h-20">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="mx-auto px-4 md:px-8 lg:px-10 flex flex-col items-center">
+    <!-- Hero Section -->
+    <section class="mx-auto flex flex-col py-12 md:py-16 lg:py-20 max-w-275">
+      <h1
+        class="text-[#1F63BF] font-bold text-[36px] md:text-[56px] lg:text-[80px] mb-6 md:mb-8 leading-[1.15] tracking-[-0.07em] self-center">
+        Moovabb arrive bientôt !
+      </h1>
+      <p
+        class="text-[#1F63BF] text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[1.3] md:leading-[1.2] lg:leading-[1.15] mb-4">
+        Le site sera disponible <strong class="font-semibold">prochainement</strong> !
+      </p>
+      <p
+        class="text-[#1F63BF] text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[1.3] md:leading-[1.2] lg:leading-[1.15]">
+        Reçois les infos en exclusivité et soit le <strong class="font-semibold">premier à te démarquer</strong> des
+        autres <strong class="font-semibold">dossiers locataires</strong> !
+      </p>
+    </section>
+
+    <!-- Form Section -->
+    <section
+      class="w-full max-w-275 bg-[#1F63BF] rounded-[20px] md:rounded-[30px] lg:rounded-[40px] shadow-xl px-6 md:px-12 lg:px-16 py-8 md:py-10 lg:py-12 mb-12 md:mb-16 lg:mb-20">
+      <p
+        class="text-white text-[15px] md:text-[18px] lg:text-[20px] font-light leading-[1.3] md:leading-[1.2] lg:leading-[1.15] mb-6 md:mb-8">
+        <strong class="font-semibold">Renseigne</strong> ton <strong class="font-semibold">email</strong> et ta <strong
+          class="font-semibold">ville</strong>
+        pour être informé du lancement et recevoir en avant-première un exemple d'un
+        vrai profil locataire Moovabb.<br><br>
+        Tu verras exactement comment tu pourras te <strong class="font-semibold">démarquer des autres
+          locataires</strong>, avant même la <strong class="font-semibold">sortie officielle</strong> du
+        site.
+      </p>
+
+      <form class="flex flex-col gap-5 md:gap-6">
+        <!-- Email Input -->
+        <div class="w-full md:w-155">
+          <input type="email" placeholder="Email" required
+            class="w-full h-12 bg-[#89B2F4] text-white text-[15px] md:text-[18px] lg:text-[20px] font-light rounded-[10px] px-6 md:px-8 py-2 border-2 border-white placeholder-white focus:outline-none focus:ring-2 focus:ring-white" />
+        </div>
+
+        <!-- City Input -->
+        <div class="w-full md:w-155">
+          <input type="text" placeholder="Ville" required
+            class="w-full h-12 bg-[#89B2F4] text-white text-[15px] md:text-[18px] lg:text-[20px] font-light rounded-[10px] px-6 md:px-8 py-2 border-2 border-white placeholder-white focus:outline-none focus:ring-2 focus:ring-white" />
+        </div>
+
+        <p
+          class="text-white text-[15px] md:text-[18px] lg:text-[20px] font-light leading-[1.3] md:leading-[1.2] lg:leading-[1.15] mt-2 md:mt-4 max-w-245">
+          On t'enverra seulement <strong class="font-semibold text-[40px]">deux mails</strong> : le premier avec un
+          exemple de
+          <strong class="font-semibold">profil locataire Moovabb</strong>, le second le <strong
+            class="font-semibold">jour
+            du lancement</strong>.
+        </p>
+        <p
+          class="text-white text-[15px] md:text-[18px] lg:text-[20px] font-light leading-[1.3] md:leading-[1.2] lg:leading-[1.15] max-w-245">
+          Juste 2 mails, pas 3, pas 4, pas 15.<br><br>
+          Sauf si tu coches la case ci-dessous :
+        </p>
+
+        <!-- Newsletter Checkbox -->
+        <div class="flex items-center gap-3 mt-2">
+          <input type="checkbox" id="newsletter"
+            class="w-5 h-5 bg-[#89B2F4] border-2 border-white rounded-[5px] cursor-pointer accent-[#EA6363]" />
+          <label for="newsletter"
+            class="text-white text-[15px] md:text-[18px] lg:text-[20px] font-light cursor-pointer">
+            J'accepte de recevoir la newsletter
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+          class="bg-[#EA6363] text-white font-bold text-[14px] md:text-[15px] lg:text-[16px] w-max px-8 py-3 rounded-[10px] shadow-md hover:bg-[#d85555] transition mt-4 md:mt-6">
+          Suivre l'aventure Moovabb !
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#1F63BF] py-6 md:py-8">
+    <div class="max-w-378 mx-auto px-4 md:px-8 lg:px-14">
+      <p class="text-white text-center text-[14px] md:text-base">&copy; 2025 Moovabb. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
