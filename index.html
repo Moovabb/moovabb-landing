@@ -4,29 +4,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moovabb - Ton profil locataire fiable</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Moovabb - Créer ton profil locataire fiable | Trouver un logement facilement</title>
+  <meta name="title" content="Moovabb - Créer ton profil locataire fiable | Trouver un logement facilement">
+  <meta name="description"
+    content="Moovabb t'aide à créer un profil locataire fiable avec des avis vérifiés de propriétaires. Augmente tes chances de trouver un logement grâce à un dossier qui inspire confiance.">
+  <meta name="keywords"
+    content="Moovabb, profil locataire, trouver un logement, recherche logement, avis locataire, dossier locataire, location appartement, confiance propriétaire, recommandation locataire, candidature logement">
+  <meta name="author" content="Moovabb">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.moovabb.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.moovabb.com/">
+  <meta property="og:title" content="Moovabb - Créer ton profil locataire fiable | Trouver un logement facilement">
+  <meta property="og:description"
+    content="Moovabb t'aide à créer un profil locataire fiable avec des avis vérifiés de propriétaires. Augmente tes chances de trouver un logement grâce à un dossier qui inspire confiance.">
+  <meta property="og:image" content="https://www.moovabb.com/assets/logo.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Moovabb">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.moovabb.com/">
+  <meta property="twitter:title" content="Moovabb - Créer ton profil locataire fiable | Trouver un logement facilement">
+  <meta property="twitter:description"
+    content="Moovabb t'aide à créer un profil locataire fiable avec des avis vérifiés de propriétaires. Augmente tes chances de trouver un logement.">
+  <meta property="twitter:image" content="https://www.moovabb.com/assets/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/logo.png">
+  <link rel="apple-touch-icon" href="./assets/logo.png">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#1f63bf">
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Moovabb",
+    "url": "https://www.moovabb.com/",
+    "description": "Créer un profil locataire fiable pour trouver un logement plus facilement",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.moovabb.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Profil Locataire",
+    "name": "Moovabb - Profil Locataire Fiable",
+    "description": "Service permettant aux locataires de créer un profil fiable avec des avis vérifiés de propriétaires pour faciliter leur recherche de logement",
+    "provider": {
+      "@type": "Organization",
+      "name": "Moovabb",
+      "url": "https://www.moovabb.com/",
+      "logo": "https://www.moovabb.com/assets/logo.png",
+      "sameAs": [
+        "https://www.instagram.com/moovabb/"
+      ]
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "France"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Avis à l'unité",
+        "price": "4.90",
+        "priceCurrency": "EUR",
+        "description": "Idéal pour tester Moovabb"
+      },
+      {
+        "@type": "Offer",
+        "name": "3 Avis",
+        "price": "11.90",
+        "priceCurrency": "EUR",
+        "description": "Parfait pour te démarquer"
+      },
+      {
+        "@type": "Offer",
+        "name": "6 Avis",
+        "price": "19.90",
+        "priceCurrency": "EUR",
+        "description": "Top pour prouver ta fiabilité"
+      }
+    ]
+  }
+  </script>
+
   <link href="./dist/output.css" rel="stylesheet">
   <script src="./script.js" defer></script>
 </head>
 
 <body class="bg-[#FAFCFF] font-[Helvetica,sans-serif]">
   <!-- Navbar -->
-  <nav class="bg-[#1f63bf] h-16 md:h-20 shadow-md flex items-start">
+  <nav class="bg-[#1f63bf] h-16 md:h-20 shadow-md flex items-start" role="navigation"
+    aria-label="Navigation principale">
     <div class="w-full max-w-275 mx-auto relative px-4">
       <div
         class="bg-[#ea6363] flex items-center w-max absolute h-24 md:h-32 -top-1 md:-top-2 left-4 md:left-20 rounded-br-[15px] rounded-bl-[15px] md:rounded-br-[20px] md:rounded-bl-[20px] px-3 md:px-4 py-2 md:py-2.5 shadow-md -rotate-3 md:-rotate-4">
-        <a href="./index.html">
-          <img src="./assets/logo.png" alt="Moovabb Logo" class="h-16 md:h-20">
+        <a href="./index.html" aria-label="Retour à l'accueil Moovabb">
+          <img src="./assets/logo.png" alt="Logo Moovabb - Profil locataire fiable" class="h-16 md:h-20">
         </a>
       </div>
     </div>
   </nav>
 
   <!-- Main Content -->
-  <main class="mx-auto px-4 md:px-8 lg:px-10 flex flex-col">
+  <main class="mx-auto px-4 md:px-8 lg:px-10 flex flex-col" role="main">
     <!-- Hero Section -->
-    <section class="mx-auto flex flex-col justify-center gap-8 lg:gap-8 py-12 md:py-20 max-w-275 lg:min-w-275">
-      <h1
+    <section class="mx-auto flex flex-col justify-center gap-8 lg:gap-8 py-12 md:py-20 max-w-275 lg:min-w-275"
+      aria-labelledby="hero-title">
+      <h1 id="hero-title"
         class="text-[#1F63BF] font-bold text-[32px] md:text-[56px] lg:text-[90px] mb-2 leading-[1.15] tracking-[-0.07em]">
         Avec Moovabb, créer ton profil locataire et inspire confiance.
       </h1>
@@ -55,93 +154,103 @@
         autres dossiers.
       </p>
 
-      <button id="hero-cta"
+      <button id="hero-cta" aria-label="En savoir plus sur nos offres"
         class="cursor-pointer bg-[#EA6363] text-white font-bold text-[14px] md:text-[15px] lg:text-[16px] px-6 md:px-8 py-3 w-full md:w-auto md:max-w-50 lg:w-37.5 lg:h-12.5 rounded-[10px] shadow-md hover:bg-[#d85555] transition">
         En savoir +
       </button>
     </section>
 
     <!-- Offers Section -->
-    <section id="offers"
+    <section id="offers" aria-labelledby="offers-title"
       class="flex justify-center items-center relative min-h-120 md:min-h-120 lg:h-120 bg-[#8AB2F5] rounded-[20px] md:rounded-[30px] lg:rounded-[40px] shadow-xl lg:min-w-275">
 
       <div class="py-8 md:py-10 lg:py-12 px-4 md:px-6 w-full max-w-275">
-        <h2
+        <h2 id="offers-title"
           class="text-white font-bold text-[36px] md:text-[56px] lg:text-[80px] leading-[1.01] tracking-[-0.07em] mb-8 lg:mb-10">
           Nos offres
         </h2>
 
         <div class="flex flex-col lg:flex-row gap-8 lg:gap-15">
           <!-- Offre 1 avis -->
-          <div class="bg-[#1F63BF] rounded-[10px] shadow-md p-5 md:p-4.5 flex-1 lg:w-80 flex flex-col">
-            <h3
+          <article class="bg-[#1F63BF] rounded-[10px] shadow-md p-5 md:p-4.5 flex-1 lg:w-80 flex flex-col" itemscope
+            itemtype="https://schema.org/Offer">
+            <h3 itemprop="name"
               class="text-white font-bold text-[28px] md:text-[36px] lg:text-[45px] lg:leading-[1.01] tracking-[-0.07em] mb-2">
               Avis à l'unité
             </h3>
-            <p class="text-white font-light text-[15px] md:text-[18px] lg:text-[20px] mb-4 md:mb-6 lg:mb-8">
+            <p itemprop="description"
+              class="text-white font-light text-[15px] md:text-[18px] lg:text-[20px] mb-4 md:mb-6 lg:mb-8">
               Idéal pour tester Moovabb
             </p>
             <div class="flex items-center md:items-start justify-between mt-auto">
-              <p
+              <p itemprop="price" content="4.90"
                 class="text-white font-bold text-[28px] md:text-[36px] lg:text-[45px] lg:leading-[1.01] tracking-[-0.07em]">
                 4,90€
+                <meta itemprop="priceCurrency" content="EUR" />
               </p>
-              <a href="./contact.html"
+              <a href="./contact.html" aria-label="En savoir plus sur l'offre Avis à l'unité"
                 class="bg-[#EA6363] text-white font-bold text-[13px] md:text-[14px] px-4 md:px-6 py-2.5 md:py-3 rounded-[10px] shadow-md hover:bg-[#d85555] transition whitespace-nowrap inline-flex items-center justify-center">
                 En savoir +
               </a>
             </div>
-          </div>
+          </article>
 
           <!-- Offre 3 Avis -->
-          <div class="bg-white rounded-[10px] shadow-md p-5 md:p-4.5 flex-1 lg:w-80 flex flex-col">
-            <h3
+          <article class="bg-white rounded-[10px] shadow-md p-5 md:p-4.5 flex-1 lg:w-80 flex flex-col" itemscope
+            itemtype="https://schema.org/Offer">
+            <h3 itemprop="name"
               class="text-[#1F63BF] font-bold text-[28px] md:text-[36px] lg:text-[45px] lg:leading-[1.01] tracking-[-0.07em] mb-2">
               3 Avis
             </h3>
-            <p class="text-[#1F63BF] font-light text-[15px] md:text-[18px] lg:text-[20px] mb-4 md:mb-6 lg:mb-8">
+            <p itemprop="description"
+              class="text-[#1F63BF] font-light text-[15px] md:text-[18px] lg:text-[20px] mb-4 md:mb-6 lg:mb-8">
               Parfait pour te démarquer
             </p>
             <div class="flex items-center md:items-start justify-between mt-auto">
-              <p
+              <p itemprop="price" content="11.90"
                 class="text-[#1F63BF] font-bold text-[28px] md:text-[36px] lg:text-[45px] lg:leading-[1.01] tracking-[-0.07em]">
                 11,90€
+                <meta itemprop="priceCurrency" content="EUR" />
               </p>
-              <a href="./contact.html"
+              <a href="./contact.html" aria-label="En savoir plus sur l'offre 3 Avis"
                 class="bg-[#EA6363] text-white font-bold text-[13px] md:text-[14px] px-4 md:px-6 py-2.5 md:py-3 rounded-[10px] shadow-md hover:bg-[#d85555] transition whitespace-nowrap inline-flex items-center justify-center">
                 En savoir +
               </a>
 
             </div>
-          </div>
+          </article>
 
           <!-- Offre 6 avis -->
-          <div class="bg-[#03318C] rounded-[10px] shadow-md p-5 md:p-4.5 flex-1 lg:w-full flex flex-col">
-            <h3
+          <article class="bg-[#03318C] rounded-[10px] shadow-md p-5 md:p-4.5 flex-1 lg:w-full flex flex-col" itemscope
+            itemtype="https://schema.org/Offer">
+            <h3 itemprop="name"
               class="text-white font-bold text-[28px] md:text-[36px] lg:text-[45px] lg:leading-[1.01] tracking-[-0.07em] mb-2">
               6 Avis
             </h3>
-            <p class="text-white font-light text-[15px] md:text-[18px] lg:text-[20px] mb-4 md:mb-6 lg:mb-8">
+            <p itemprop="description"
+              class="text-white font-light text-[15px] md:text-[18px] lg:text-[20px] mb-4 md:mb-6 lg:mb-8">
               Top pour prouver ta fiabilité
             </p>
             <div class="flex items-center md:items-start justify-between mt-auto">
-              <p
+              <p itemprop="price" content="19.90"
                 class="text-white font-bold text-[28px] md:text-[36px] lg:text-[45px] lg:leading-[1.01] tracking-[-0.07em]">
                 19,90€
+                <meta itemprop="priceCurrency" content="EUR" />
               </p>
-              <a href="./contact.html"
+              <a href="./contact.html" aria-label="En savoir plus sur l'offre 6 Avis"
                 class="bg-[#EA6363] text-white font-bold text-[13px] md:text-[14px] px-4 md:px-6 py-2.5 md:py-3 rounded-[10px] shadow-md hover:bg-[#d85555] transition whitespace-nowrap inline-flex items-center justify-center">
                 En savoir +
               </a>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Instagram Section -->
-    <section class="mx-auto flex flex-col justify-center py-12 md:py-20 max-w-275 min-w-full lg:min-w-275">
-      <h2
+    <section class="mx-auto flex flex-col justify-center py-12 md:py-20 max-w-275 min-w-full lg:min-w-275"
+      aria-labelledby="instagram-title">
+      <h2 id="instagram-title"
         class="text-[#1F63BF] font-bold text-[28px] md:text-[48px] lg:text-[80px] lg:leading-[1.01] tracking-[-0.07em] mb-4 lg:mb-6">
         Suis-nous sur instagram
       </h2>
@@ -157,7 +266,8 @@
           locataires et propriétaires !
         </p>
 
-        <a href="https://www.instagram.com/moovabb/" target="_blank"
+        <a href="https://www.instagram.com/moovabb/" target="_blank" rel="noopener noreferrer"
+          aria-label="Suivre Moovabb sur Instagram (ouvre dans un nouvel onglet)"
           class="bg-[#EA6363] text-white font-bold text-[13px] md:text-[14px] lg:text-[15px] px-6 md:px-8 py-3 rounded-[7px] shadow hover:bg-[#d85555] transition self-center w-full text-center lg:w-max lg:self-auto whitespace-nowrap">
           Suivre Moovabb sur instagram
         </a>
@@ -165,15 +275,17 @@
     </section>
 
     <!-- MacBook Mockup Section -->
-    <section class="flex justify-center pb-12 md:pb-20">
+    <section class="flex justify-center pb-12 md:pb-20" aria-label="Aperçu de l'application Moovabb">
       <div class="w-full max-w-275 lg:min-w-275">
-        <img src="./assets/instagram.png" alt="Application Moovabb" class="w-full h-auto">
+        <img src="./assets/instagram.png"
+          alt="Aperçu de l'application Moovabb montrant les profils locataires et les avis vérifiés"
+          class="w-full h-auto">
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#1F63BF] py-6 md:py-8">
+  <footer class="bg-[#1F63BF] py-6 md:py-8" role="contentinfo">
     <div class="max-w-378 mx-auto px-4 md:px-8 lg:px-14">
       <p class="text-white text-center text-[14px] md:text-base">&copy; 2025 Moovabb. Tous droits réservés.</p>
     </div>

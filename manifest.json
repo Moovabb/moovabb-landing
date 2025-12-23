@@ -1,0 +1,26 @@
+{
+  "name": "Moovabb - Profil Locataire Fiable",
+  "short_name": "Moovabb",
+  "description": "Créer un profil locataire fiable pour trouver un logement plus facilement",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFCFF",
+  "theme_color": "#1f63bf",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "business"],
+  "lang": "fr"
+}
