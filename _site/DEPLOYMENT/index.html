@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Deployment Guide - GitHub Pages with Clean URLs | moovabb-landing</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Deployment Guide - GitHub Pages with Clean URLs" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/DEPLOYMENT/" />
+<meta property="og:url" content="http://localhost:4000/DEPLOYMENT/" />
+<meta property="og:site_name" content="moovabb-landing" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Deployment Guide - GitHub Pages with Clean URLs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Deployment Guide - GitHub Pages with Clean URLs","url":"http://localhost:4000/DEPLOYMENT/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=d6ddb7b6c39f96d460c006138af0dcb7c8473f8f">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">moovabb-landing</a></h1>
+      
+
+      <h1 id="deployment-guide---github-pages-with-clean-urls">Deployment Guide - GitHub Pages with Clean URLs</h1>
+
+<h2 id="-what-was-changed">✅ What Was Changed</h2>
+
+<p>Your site now has <strong>clean, professional URLs</strong>:</p>
+<ul>
+  <li><strong>Home page</strong>: <code class="language-plaintext highlighter-rouge">https://yourdomain.com/</code> (instead of <code class="language-plaintext highlighter-rouge">/index.html</code>)</li>
+  <li><strong>Contact page</strong>: <code class="language-plaintext highlighter-rouge">https://yourdomain.com/contact</code> (instead of <code class="language-plaintext highlighter-rouge">/contact.html</code>)</li>
+</ul>
+
+<h2 id="-directory-structure">📁 Directory Structure</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>moovabb_landing/
+├── _config.yml          # Jekyll config for clean URLs
+├── index.html           # Home page (serves /)
+├── contact/
+│   └── index.html       # Contact page (serves /contact)
+├── assets/              # Images and logos
+├── dist/                # Compiled CSS
+└── ...
+</code></pre></div></div>
+
+<h2 id="-how-it-works-on-github-pages">🚀 How It Works on GitHub Pages</h2>
+
+<p>GitHub Pages has <strong>Jekyll built-in</strong> (no extra setup needed!). With the <code class="language-plaintext highlighter-rouge">_config.yml</code> file:</p>
+<ul>
+  <li>Jekyll automatically handles clean URLs</li>
+  <li><code class="language-plaintext highlighter-rouge">/contact/index.html</code> → accessible at <code class="language-plaintext highlighter-rouge">/contact</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/index.html</code> → accessible at <code class="language-plaintext highlighter-rouge">/</code></li>
+</ul>
+
+<h2 id="-deployment-steps">📝 Deployment Steps</h2>
+
+<ol>
+  <li><strong>Commit and push your changes:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"feat: add clean URLs with Jekyll config"</span>
+git push origin main
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Ensure GitHub Pages is enabled:</strong>
+    <ul>
+      <li>Go to your repo on GitHub</li>
+      <li>Settings → Pages</li>
+      <li>Source: Deploy from branch <code class="language-plaintext highlighter-rouge">main</code></li>
+      <li>Folder: <code class="language-plaintext highlighter-rouge">/ (root)</code></li>
+      <li>Click Save</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Wait 1-2 minutes</strong> for GitHub to build and deploy</p>
+  </li>
+  <li><strong>Test your URLs:</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">https://yourusername.github.io/moovabb_landing/</code> → Home</li>
+      <li><code class="language-plaintext highlighter-rouge">https://yourusername.github.io/moovabb_landing/contact</code> → Contact</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="-custom-domain-optional">🌐 Custom Domain (Optional)</h2>
+
+<p>If you have a custom domain (like <code class="language-plaintext highlighter-rouge">moovabb.com</code>):</p>
+
+<ol>
+  <li><strong>Add to GitHub Pages:</strong>
+    <ul>
+      <li>Settings → Pages → Custom domain</li>
+      <li>Enter: <code class="language-plaintext highlighter-rouge">www.moovabb.com</code></li>
+      <li>Save</li>
+    </ul>
+  </li>
+  <li><strong>Update DNS records with your domain provider:</strong>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Type: CNAME
+Name: www
+Value: yourusername.github.io
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Wait for DNS propagation</strong> (5-30 minutes)</p>
+  </li>
+  <li><strong>Enable HTTPS</strong> in GitHub Pages settings</li>
+</ol>
+
+<h2 id="-seo-updates">🔍 SEO Updates</h2>
+
+<p>All internal links now use clean URLs:</p>
+<ul>
+  <li>✅ Sitemap updated with <code class="language-plaintext highlighter-rouge">/contact</code> (not <code class="language-plaintext highlighter-rouge">/contact.html</code>)</li>
+  <li>✅ Canonical URLs updated in meta tags</li>
+  <li>✅ Open Graph URLs updated</li>
+</ul>
+
+<h2 id="-local-testing">🧪 Local Testing</h2>
+
+<p>To test locally with Jekyll:</p>
+
+<ol>
+  <li><strong>Install Jekyll</strong> (one-time):
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler jekyll
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Create Gemfile:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'source "https://rubygems.org"
+gem "github-pages", group: :jekyll_plugins'</span> <span class="o">&gt;</span> Gemfile
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Install and run:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install
+</span>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Visit:</strong> <code class="language-plaintext highlighter-rouge">http://localhost:4000/</code></li>
+</ol>
+
+<p><strong>Note:</strong> You can also just open <code class="language-plaintext highlighter-rouge">index.html</code> directly in a browser for simple testing - the clean URLs will work once deployed to GitHub Pages.</p>
+
+<h2 id="-alternative-switch-to-vercel-if-needed">🎯 Alternative: Switch to Vercel (If Needed)</h2>
+
+<p>If you want more control or need server-side features later:</p>
+
+<ol>
+  <li><strong>Push to GitHub</strong> (same as above)</li>
+  <li><strong>Import on Vercel:</strong>
+    <ul>
+      <li>Go to vercel.com</li>
+      <li>“New Project” → Import your GitHub repo</li>
+      <li>Auto-detects static site</li>
+      <li>Deploy</li>
+    </ul>
+  </li>
+  <li><strong>Clean URLs work automatically</strong> on Vercel</li>
+</ol>
+
+<h2 id="-troubleshooting">🚨 Troubleshooting</h2>
+
+<p><strong>Issue:</strong> 404 errors on <code class="language-plaintext highlighter-rouge">/contact</code></p>
+<ul>
+  <li><strong>Fix:</strong> Make sure <code class="language-plaintext highlighter-rouge">_config.yml</code> is committed and pushed</li>
+  <li><strong>Fix:</strong> Wait 1-2 minutes after pushing for GitHub to rebuild</li>
+</ul>
+
+<p><strong>Issue:</strong> Styles not loading on <code class="language-plaintext highlighter-rouge">/contact</code></p>
+<ul>
+  <li><strong>Fix:</strong> Already fixed! Paths use <code class="language-plaintext highlighter-rouge">../</code> for assets</li>
+</ul>
+
+<p><strong>Issue:</strong> Clean URLs not working locally</p>
+<ul>
+  <li><strong>Normal!</strong> They only work when deployed to GitHub Pages (or with Jekyll server)</li>
+</ul>
+
+<h2 id="-whats-different-from-before">📊 What’s Different from Before</h2>
+
+<h3 id="before">Before:</h3>
+<ul>
+  <li>URLs: <code class="language-plaintext highlighter-rouge">/index.html</code>, <code class="language-plaintext highlighter-rouge">/contact.html</code> ❌</li>
+  <li>Looked unprofessional</li>
+  <li>Bad for SEO</li>
+</ul>
+
+<h3 id="after">After:</h3>
+<ul>
+  <li>URLs: <code class="language-plaintext highlighter-rouge">/</code>, <code class="language-plaintext highlighter-rouge">/contact</code> ✅</li>
+  <li>Professional appearance</li>
+  <li>Better SEO</li>
+  <li>No server needed (Jekyll on GitHub Pages handles it)</li>
+</ul>
+
+<h2 id="-next-steps">✨ Next Steps</h2>
+
+<ol>
+  <li>Push to GitHub</li>
+  <li>Verify it works</li>
+  <li>(Optional) Add custom domain</li>
+  <li>Share your professional site! 🎉</li>
+</ol>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

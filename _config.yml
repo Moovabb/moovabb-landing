@@ -1,0 +1,4 @@
+# GitHub Pages Jekyll Configuration
+permalink: pretty
+include: ['_pages']
+exclude: ['node_modules', 'src', 'README.md', 'SEO_GUIDE.md', 'package.json', 'package-lock.json']
