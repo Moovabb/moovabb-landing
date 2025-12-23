@@ -91,16 +91,16 @@
         site.
       </p>
 
-      <form class="flex flex-col gap-5 md:gap-6">
+      <form class="flex flex-col gap-5 md:gap-6" action="https://formspree.io/f/xjgbjozq" method="POST">
         <!-- Email Input -->
         <div class="w-full md:w-155">
-          <input id="email" type="email" placeholder="Email" required
+          <input id="email" type="email" name="email" placeholder="Email" required
             class="w-full h-12 bg-[#89B2F4] text-white text-[15px] md:text-[18px] lg:text-[20px] font-light rounded-[10px] px-6 md:px-8 py-2 border-2 border-white placeholder-white focus:outline-none focus:ring-2 focus:ring-white" />
         </div>
 
         <!-- City Input -->
         <div class="w-full md:w-155">
-          <input id="city" type="text" placeholder="Ville" required
+          <input id="city" type="text" name="city" placeholder="Ville" required
             class="w-full h-12 bg-[#89B2F4] text-white text-[15px] md:text-[18px] lg:text-[20px] font-light rounded-[10px] px-6 md:px-8 py-2 border-2 border-white placeholder-white focus:outline-none focus:ring-2 focus:ring-white" />
         </div>
 
@@ -123,7 +123,7 @@
           Sauf si tu coches la case ci-dessous :
         </span>
         <div class="flex items-center gap-3">
-          <input type="checkbox" id="newsletter"
+          <input type="checkbox" id="newsletter" name="newsletter"
             class="w-5 h-5 bg-[#89B2F4] border-2 border-white rounded-[5px] cursor-pointer accent-[#EA6363]" />
           <label for="newsletter"
             class="text-white text-[15px] md:text-[18px] lg:text-[20px] font-light cursor-pointer">
@@ -149,5 +149,7 @@
 
   <script src="./contact-form.js"></script>
 </body>
+
+
 
 </html>
