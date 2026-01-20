@@ -103,16 +103,26 @@
   </script>
 
   <link href="./dist/output.css" rel="stylesheet">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <script src="./script.js" defer></script>
 </head>
 
 <body class="bg-[#FAFCFF] font-[Helvetica,sans-serif]">
   <!-- Navbar -->
-  <nav class="bg-[#1f63bf] h-16 md:h-20 shadow-md flex items-start" role="navigation"
+  <nav class="bg-[#1f63bf] h-12 md:h-20 shadow-md flex items-start fixed top-0 z-50 w-full" role="navigation"
     aria-label="Navigation principale">
     <div class="w-full max-w-275 mx-auto relative px-4">
       <div
-        class="bg-[#ea6363] flex items-center justify-center absolute h-20 w-20 md:h-32 top-6 left-[50%] -ml-10 md:w-max md:-top-2 md:left-20 rounded-[15px] md:rounded-tl-none px-3 md:px-4 py-2 md:py-2.5 shadow-md -rotate-3 md:-rotate-4">
+        class="bg-[#ea6363] flex items-center justify-center absolute h-20 w-20 md:h-32 left-[50%] -ml-10 md:w-max -top-2 md:left-20 rounded-t-none rounded-[15px] md:rounded-tl-none px-3 md:px-4 py-2 md:py-2.5 shadow-md -rotate-3 md:-rotate-4">
         <a href="./index.html" aria-label="Retour à l'accueil Moovabb">
           <img src="./assets/logo.png" alt="Logo Moovabb - Profil locataire fiable" class="h-12 md:h-20">
         </a>
@@ -121,20 +131,29 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="mx-auto px-4 md:px-8 lg:px-10 flex flex-col" role="main">
+  <main class="mx-auto px-4 pt-12 md:pt-20 md:px-8 lg:px-10 flex flex-col" role="main">
     <!-- Hero Section -->
-    <section
-      class="mx-auto flex flex-col justify-center gap-8 lg:gap-8 py-12 md:py-20 px-4 md:px-6 max-w-350 lg:min-w-275"
+    <section class="mx-auto flex flex-col justify-center gap-4 py-12 md:py-20 px-4 md:px-6 max-w-350 lg:min-w-275"
       aria-labelledby="hero-title">
       <h1 id="hero-title"
-        class="text-[#1F63BF] font-bold text-[32px] md:text-[56px] lg:text-[90px] mb-2 leading-[1.15] tracking-[-0.07em]">
+        class="text-[#1F63BF] font-bold text-[32px] md:text-[56px] lg:text-[90px] leading-[1.15] tracking-[-0.07em] max-w-250">
         La 1ère plateforme qui fait briller le locataire avant ses revenus.
       </h1>
 
+      <p
+        class="block lg:hidden text-[#1F63BF] text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[1.3] md:leading-[1.2] lg:leading-[1.15]">
+        Regroupe des <strong class="font-semibold">avis</strong> et <strong class="font-semibold">recommandations
+          fiables</strong> de tes <strong class="font-semibold">anciens</strong> ou <strong
+          class="font-semibold">actuels
+          bailleurs</strong> dans
+        un <strong class="font-semibold">profil clair</strong>, prêt
+        à être
+        partagé avec des <strong class="font-semibold">propriétaires ou agences</strong>.
+      </p>
       <div class="w-full flex flex-col-reverse lg:flex-row items-center justify-between">
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-4">
           <p
-            class="text-[#1F63BF] text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[1.3] md:leading-[1.2] lg:leading-[1.15]">
+            class="hidden lg:block text-[#1F63BF] text-[16px] md:text-[18px] lg:text-[20px] font-light leading-[1.3] md:leading-[1.2] lg:leading-[1.15]">
             Regroupe des <strong class="font-semibold">avis</strong> et <strong class="font-semibold">recommandations
               fiables</strong> de tes <strong class="font-semibold">anciens</strong> ou <strong
               class="font-semibold">actuels bailleurs</strong> dans
@@ -168,7 +187,7 @@
             En savoir +
           </button>
         </div>
-        <img src="./assets/banner.png" alt="Banniere Moovabb" class="h-100 md:h-125">
+        <img src="./assets/banner.png" alt="Banniere Moovabb" class="max-h-100 md:min-h-125 my-4 md:my-0">
       </div>
     </section>
 

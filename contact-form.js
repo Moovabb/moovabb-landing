@@ -21,6 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }).then(response => {
       if (response.ok) {
         showMessage('success', 'Merci ! Vous êtes inscrit(e) à l\'aventure Moovabb ! 🎉')
+
+        // Track successful form submission
+        if (typeof gtag !== 'undefined') {
+          const newsletterChecked = form.querySelector('#newsletter').checked;
+          gtag('event', 'form_submission', {
+            'event_category': 'lead_generation',
+            'event_label': 'Contact Form',
+            'newsletter_opted_in': newsletterChecked
+          });
+
+          // Track as conversion
+          gtag('event', 'conversion', {
+            'send_to': 'G-5JH41ZE143',
+            'event_category': 'lead',
+            'event_label': 'Contact Form Completed'
+          });
+        }
+
         form.reset()
       } else {
         response.json().then(data => {
