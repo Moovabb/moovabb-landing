@@ -15,6 +15,7 @@
   <meta name="author" content="Moovabb">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.moovabb.com/" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -23,6 +24,7 @@
   <meta property="og:description"
     content="Moovabb t'aide à créer un profil locataire fiable avec des avis vérifiés de propriétaires. Augmente tes chances de trouver un logement grâce à un dossier qui inspire confiance.">
   <meta property="og:image" content="https://www.moovabb.com/assets/logo.png">
+  <meta property="og:image:alt" content="Logo Moovabb - Profil locataire fiable">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Moovabb">
 
@@ -33,6 +35,7 @@
   <meta property="twitter:description"
     content="Moovabb t'aide à créer un profil locataire fiable avec des avis vérifiés de propriétaires. Augmente tes chances de trouver un logement.">
   <meta property="twitter:image" content="https://www.moovabb.com/assets/logo.png">
+  <meta property="twitter:image:alt" content="Logo Moovabb - Profil locataire fiable">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/logo.png">
@@ -57,6 +60,21 @@
       "target": "https://www.moovabb.com/?s={search_term_string}",
       "query-input": "required name=search_term_string"
     }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://www.moovabb.com/"
+      }
+    ]
   }
   </script>
 
@@ -186,7 +204,7 @@
             En savoir +
           </button>
         </div>
-        <img src="./assets/banner.png" alt="Banniere Moovabb" class="max-h-100 md:min-h-125 my-4 md:my-0">
+        <img src="./assets/banner.png" alt="Illustration Moovabb montrant un profil locataire avec avis vérifiés et recommandations de propriétaires" class="max-h-100 md:min-h-125 my-4 md:my-0">
       </div>
     </section>
 

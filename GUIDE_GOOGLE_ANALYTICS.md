@@ -1,34 +1,5 @@
 # Guide Google Analytics & Campagnes Marketing
 
-## 🎯 Instructions d'Installation
-
-### 1. Obtenir votre ID de Suivi Google Analytics
-
-1. Rendez-vous sur [Google Analytics](https://analytics.google.com/)
-2. Créez une nouvelle propriété GA4 pour votre site web
-3. Allez dans **Admin** (en bas à gauche)
-4. Dans la colonne **Propriété**, cliquez sur **Flux de données**
-5. Sélectionnez votre flux de données web
-6. Copiez votre **ID de mesure** (format : `G-XXXXXXXXXX`)
-
-### 2. Remplacer l'ID Temporaire dans le Code
-
-Remplacez `G-XXXXXXXXXX` par votre véritable ID de mesure dans ces fichiers :
-- `index.html` (lignes 108 et 113)
-- `contact/index.html` (lignes 43 et 48)
-- `contact-form.js` (ligne 36)
-
-Vous pouvez le faire avec cette commande :
-```bash
-find . -type f \( -name "*.html" -o -name "*.js" \) -exec sed -i '' 's/G-XXXXXXXXXX/VOTRE-ID-REEL/g' {} +
-```
-
-### 3. Déployer votre Site Mis à Jour
-
-Publiez vos modifications en production et vérifiez que GA fonctionne en consultant le rapport "Temps réel" dans Google Analytics.
-
----
-
 ## 📊 Ce qui est Suivi
 
 ### Suivi Automatique (Événements GA4 par Défaut)
@@ -210,45 +181,9 @@ Vous pourrez maintenant voir les taux de conversion dans tous vos rapports !
 - **Fort engagement Instagram** : Concentrer plus de ressources là-bas
 - **Faible inscription newsletter** : Considérer de meilleurs incitatifs
 
-### Idées de Tests A/B
-
-Créer plusieurs URLs de campagne avec différents contenus :
-```
-utm_content=bouton_bleu
-utm_content=bouton_rouge
-utm_content=reduction_10
-utm_content=essai_gratuit
-```
-
-Comparer laquelle performe le mieux !
-
----
-
-## 🔍 Dépannage
-
-### Les Événements n'Apparaissent Pas ?
-1. Vérifier la console du navigateur pour les erreurs
-2. Vérifier que l'ID de mesure GA est correct
-3. Utiliser **DebugView** dans GA4 (Admin → DebugView)
-4. S'assurer que les bloqueurs de publicités sont désactivés lors des tests
-
-### Les Paramètres de Campagne ne Sont Pas Suivis ?
-1. S'assurer que les paramètres UTM sont dans l'URL
-2. Vérifier qu'ils sont correctement orthographiés (minuscules recommandées)
-3. Voir **Temps réel → Nombre d'événements par nom d'événement** pour voir les événements campaign_visit
-
-### Tester votre Installation
-1. Visiter votre site avec des paramètres de campagne
-2. Cliquer sur les boutons et soumettre des formulaires
-3. Vérifier le rapport Temps réel de GA4 (dans les 30 secondes)
-4. Chercher vos événements sous "Nombre d'événements par nom d'événement"
-
----
-
 ## 📱 Astuces Pro
 
 1. **Raccourcir vos URLs** : Utiliser [bit.ly](https://bitly.com) ou similaire pour rendre les URLs de campagne plus propres pour la bio/stories Instagram
-
 2. **Créer une Feuille de Suivi de Campagne** : Maintenir un Google Sheet avec :
    - Nom de la campagne
    - URL
@@ -257,23 +192,6 @@ Comparer laquelle performe le mieux !
    - Budget
    - Objectifs
    - Métriques de performance
-
 3. **Configurer des Rapports Hebdomadaires** : GA4 peut vous envoyer des rapports automatisés par email chaque semaine
-
 4. **Mobile vs Desktop** : Vérifier la répartition par appareil dans GA4 pour optimiser pour votre audience
-
 5. **Meilleurs Horaires de Publication** : Croiser les pics de trafic GA4 avec votre calendrier de publication
-
----
-
-## 🚀 Prochaines Étapes
-
-1. Remplacer l'ID de mesure temporaire
-2. Déployer votre site
-3. Créer votre première URL de campagne
-4. La tester vous-même
-5. Lancer vos campagnes marketing
-6. Surveiller GA4 quotidiennement la première semaine
-7. Ajuster la stratégie selon les données
-
-Bonne chance avec Moovabb ! 🎉
