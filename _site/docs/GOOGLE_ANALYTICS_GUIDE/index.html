@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Google Analytics Setup &amp; Marketing Campaign Guide | moovabb-landing</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Google Analytics Setup &amp; Marketing Campaign Guide" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/docs/GOOGLE_ANALYTICS_GUIDE/" />
+<meta property="og:url" content="http://localhost:4000/docs/GOOGLE_ANALYTICS_GUIDE/" />
+<meta property="og:site_name" content="moovabb-landing" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Google Analytics Setup &amp; Marketing Campaign Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Google Analytics Setup &amp; Marketing Campaign Guide","url":"http://localhost:4000/docs/GOOGLE_ANALYTICS_GUIDE/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=100b388baaaa4789c281f8d03feeba2c09ebd053">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">moovabb-landing</a></h1>
+      
+
+      <h1 id="google-analytics-setup--marketing-campaign-guide">Google Analytics Setup &amp; Marketing Campaign Guide</h1>
+
+<h2 id="-setup-instructions">🎯 Setup Instructions</h2>
+
+<h3 id="1-get-your-google-analytics-tracking-id">1. Get Your Google Analytics Tracking ID</h3>
+
+<ol>
+  <li>Go to <a href="https://analytics.google.com/">Google Analytics</a></li>
+  <li>Create a new GA4 property for your website</li>
+  <li>Navigate to <strong>Admin</strong> (bottom left)</li>
+  <li>Under <strong>Property</strong>, click <strong>Data Streams</strong></li>
+  <li>Select your web data stream</li>
+  <li>Copy your <strong>Measurement ID</strong> (format: <code class="language-plaintext highlighter-rouge">G-XXXXXXXXXX</code>)</li>
+</ol>
+
+<h3 id="2-replace-placeholder-id-in-your-code">2. Replace Placeholder ID in Your Code</h3>
+
+<p>Replace <code class="language-plaintext highlighter-rouge">G-XXXXXXXXXX</code> with your actual Measurement ID in these files:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">index.html</code> (lines 108 and 113)</li>
+  <li><code class="language-plaintext highlighter-rouge">contact/index.html</code> (lines 43 and 48)</li>
+  <li><code class="language-plaintext highlighter-rouge">contact-form.js</code> (line 36)</li>
+</ul>
+
+<p>You can do this with a find-and-replace:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find <span class="nb">.</span> <span class="nt">-type</span> f <span class="se">\(</span> <span class="nt">-name</span> <span class="s2">"*.html"</span> <span class="nt">-o</span> <span class="nt">-name</span> <span class="s2">"*.js"</span> <span class="se">\)</span> <span class="nt">-exec</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">''</span> <span class="s1">'s/G-XXXXXXXXXX/YOUR-ACTUAL-ID/g'</span> <span class="o">{}</span> +
+</code></pre></div></div>
+
+<h3 id="3-deploy-your-updated-site">3. Deploy Your Updated Site</h3>
+
+<p>Push your changes to production and verify GA is working by checking the “Realtime” report in Google Analytics.</p>
+
+<hr />
+
+<h2 id="-whats-being-tracked">📊 What’s Being Tracked</h2>
+
+<h3 id="automatic-tracking-default-ga4-events">Automatic Tracking (Default GA4 Events)</h3>
+<ul>
+  <li><strong>page_view</strong>: Every page visit</li>
+  <li><strong>first_visit</strong>: First-time visitors</li>
+  <li><strong>session_start</strong>: New sessions</li>
+  <li><strong>user_engagement</strong>: Active engagement on your site</li>
+  <li><strong>scroll</strong>: When users scroll (90% depth)</li>
+</ul>
+
+<h3 id="custom-events-ive-added">Custom Events I’ve Added</h3>
+
+<h4 id="1-hero_cta_click">1. <strong>hero_cta_click</strong></h4>
+<ul>
+  <li>Triggered when: User clicks “En savoir +” button on homepage</li>
+  <li>Category: <code class="language-plaintext highlighter-rouge">engagement</code></li>
+  <li>Label: <code class="language-plaintext highlighter-rouge">Hero CTA Button</code></li>
+</ul>
+
+<h4 id="2-offer_click">2. <strong>offer_click</strong></h4>
+<ul>
+  <li>Triggered when: User clicks any offer “En savoir +” button</li>
+  <li>Category: <code class="language-plaintext highlighter-rouge">offers</code></li>
+  <li>Label: The specific offer name (e.g., “Avis à l’unité”, “3 Avis”, “5 Avis”)</li>
+</ul>
+
+<h4 id="3-instagram_follow_click">3. <strong>instagram_follow_click</strong></h4>
+<ul>
+  <li>Triggered when: User clicks Instagram follow button</li>
+  <li>Category: <code class="language-plaintext highlighter-rouge">social</code></li>
+  <li>Label: <code class="language-plaintext highlighter-rouge">Instagram Follow Button</code></li>
+</ul>
+
+<h4 id="4-campaign_visit">4. <strong>campaign_visit</strong></h4>
+<ul>
+  <li>Triggered when: User arrives via a marketing campaign (UTM parameters)</li>
+  <li>Category: <code class="language-plaintext highlighter-rouge">marketing</code></li>
+  <li>Data captured: <code class="language-plaintext highlighter-rouge">utm_source</code>, <code class="language-plaintext highlighter-rouge">utm_medium</code>, <code class="language-plaintext highlighter-rouge">utm_campaign</code></li>
+</ul>
+
+<h4 id="5-form_submission">5. <strong>form_submission</strong></h4>
+<ul>
+  <li>Triggered when: User successfully submits the contact form</li>
+  <li>Category: <code class="language-plaintext highlighter-rouge">lead_generation</code></li>
+  <li>Label: <code class="language-plaintext highlighter-rouge">Contact Form</code></li>
+  <li>Additional data: <code class="language-plaintext highlighter-rouge">newsletter_opted_in</code> (true/false)</li>
+</ul>
+
+<h4 id="6-conversion">6. <strong>conversion</strong></h4>
+<ul>
+  <li>Triggered when: Form submission completes (for conversion tracking)</li>
+  <li>Category: <code class="language-plaintext highlighter-rouge">lead</code></li>
+  <li>Label: <code class="language-plaintext highlighter-rouge">Contact Form Completed</code></li>
+</ul>
+
+<hr />
+
+<h2 id="-how-to-use-this-for-marketing-campaigns">🎯 How to Use This for Marketing Campaigns</h2>
+
+<h3 id="creating-campaign-urls">Creating Campaign URLs</h3>
+
+<p>Use UTM parameters to track where your traffic comes from. Format:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.moovabb.com/?utm_source=SOURCE&amp;utm_medium=MEDIUM&amp;utm_campaign=CAMPAIGN
+</code></pre></div></div>
+
+<h3 id="campaign-examples">Campaign Examples</h3>
+
+<h4 id="instagram-ad-campaign">Instagram Ad Campaign</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.moovabb.com/?utm_source=instagram&amp;utm_medium=paid_social&amp;utm_campaign=launch_january_2025
+</code></pre></div></div>
+
+<h4 id="instagram-story-organic">Instagram Story (Organic)</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.moovabb.com/?utm_source=instagram&amp;utm_medium=social&amp;utm_campaign=story_swipe_up
+</code></pre></div></div>
+
+<h4 id="email-newsletter">Email Newsletter</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.moovabb.com/?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=launch_announcement
+</code></pre></div></div>
+
+<h4 id="facebook-ad">Facebook Ad</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.moovabb.com/?utm_source=facebook&amp;utm_medium=paid_social&amp;utm_campaign=winter_2025
+</code></pre></div></div>
+
+<h4 id="google-ads">Google Ads</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.moovabb.com/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=location_recherche
+</code></pre></div></div>
+
+<h4 id="influencer-partnership">Influencer Partnership</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.moovabb.com/?utm_source=influencer_name&amp;utm_medium=social&amp;utm_campaign=partnership_Q1
+</code></pre></div></div>
+
+<h3 id="utm-parameter-guide">UTM Parameter Guide</h3>
+
+<ul>
+  <li><strong>utm_source</strong>: Where the traffic comes from (e.g., <code class="language-plaintext highlighter-rouge">instagram</code>, <code class="language-plaintext highlighter-rouge">facebook</code>, <code class="language-plaintext highlighter-rouge">google</code>, <code class="language-plaintext highlighter-rouge">newsletter</code>)</li>
+  <li><strong>utm_medium</strong>: Marketing channel type (e.g., <code class="language-plaintext highlighter-rouge">social</code>, <code class="language-plaintext highlighter-rouge">paid_social</code>, <code class="language-plaintext highlighter-rouge">email</code>, <code class="language-plaintext highlighter-rouge">cpc</code>)</li>
+  <li><strong>utm_campaign</strong>: Specific campaign name (e.g., <code class="language-plaintext highlighter-rouge">launch_january_2025</code>, <code class="language-plaintext highlighter-rouge">spring_promo</code>)</li>
+  <li><strong>utm_content</strong> (optional): Differentiate similar content (e.g., <code class="language-plaintext highlighter-rouge">blue_button</code>, <code class="language-plaintext highlighter-rouge">red_button</code>)</li>
+  <li><strong>utm_term</strong> (optional): Paid search keywords (e.g., <code class="language-plaintext highlighter-rouge">location+appartement</code>)</li>
+</ul>
+
+<h3 id="free-url-builder-tool">Free URL Builder Tool</h3>
+<p>Use <a href="https://ga-dev-tools.google/campaign-url-builder/">Google’s Campaign URL Builder</a> to create your campaign URLs.</p>
+
+<hr />
+
+<h2 id="-viewing-your-data-in-google-analytics">📈 Viewing Your Data in Google Analytics</h2>
+
+<h3 id="1-real-time-reports">1. Real-Time Reports</h3>
+<p><strong>Admin → Realtime</strong></p>
+<ul>
+  <li>See current active users</li>
+  <li>View which pages they’re on</li>
+  <li>See which campaigns are driving traffic RIGHT NOW</li>
+</ul>
+
+<h3 id="2-campaign-performance">2. Campaign Performance</h3>
+<p><strong>Reports → Acquisition → Traffic acquisition</strong></p>
+<ul>
+  <li>View all traffic sources</li>
+  <li>Compare campaign performance</li>
+  <li>See which campaigns drive the most conversions</li>
+</ul>
+
+<h3 id="3-custom-events">3. Custom Events</h3>
+<p><strong>Reports → Engagement → Events</strong></p>
+<ul>
+  <li>See all custom events (hero_cta_click, offer_click, etc.)</li>
+  <li>View event counts and user engagement</li>
+  <li>Track conversion rates</li>
+</ul>
+
+<h3 id="4-campaign-visits">4. Campaign Visits</h3>
+<p><strong>Reports → Engagement → Events → campaign_visit</strong></p>
+<ul>
+  <li>Click on the event name</li>
+  <li>See breakdown by <code class="language-plaintext highlighter-rouge">utm_source</code>, <code class="language-plaintext highlighter-rouge">utm_medium</code>, <code class="language-plaintext highlighter-rouge">utm_campaign</code></li>
+  <li>Compare which campaigns perform best</li>
+</ul>
+
+<h3 id="5-form-submissions-lead-tracking">5. Form Submissions (Lead Tracking)</h3>
+<p><strong>Reports → Engagement → Events → form_submission</strong></p>
+<ul>
+  <li>See total form submissions</li>
+  <li>View newsletter opt-in rate</li>
+  <li>Track by traffic source</li>
+</ul>
+
+<h3 id="6-creating-custom-reports">6. Creating Custom Reports</h3>
+<p><strong>Explore → Create a blank exploration</strong></p>
+
+<p>Example: Campaign Effectiveness Report</p>
+<ol>
+  <li>Add dimensions: <code class="language-plaintext highlighter-rouge">Session source</code>, <code class="language-plaintext highlighter-rouge">Session medium</code>, <code class="language-plaintext highlighter-rouge">Session campaign</code></li>
+  <li>Add metrics: <code class="language-plaintext highlighter-rouge">Sessions</code>, <code class="language-plaintext highlighter-rouge">Users</code>, <code class="language-plaintext highlighter-rouge">form_submission</code> (event count), <code class="language-plaintext highlighter-rouge">Conversion rate</code></li>
+  <li>Filter by date range</li>
+  <li>Export to Google Sheets</li>
+</ol>
+
+<hr />
+
+<h2 id="-setting-up-conversions-in-ga4">🎨 Setting Up Conversions in GA4</h2>
+
+<p>To track form submissions as official conversions:</p>
+
+<ol>
+  <li>Go to <strong>Admin → Events</strong></li>
+  <li>Find <code class="language-plaintext highlighter-rouge">form_submission</code> event</li>
+  <li>Toggle <strong>Mark as conversion</strong> to ON</li>
+  <li>Do the same for <code class="language-plaintext highlighter-rouge">conversion</code> event</li>
+</ol>
+
+<p>Now you can see conversion rates in all your reports!</p>
+
+<hr />
+
+<h2 id="-marketing-campaign-strategy-tips">💡 Marketing Campaign Strategy Tips</h2>
+
+<h3 id="what-to-monitor">What to Monitor</h3>
+
+<ol>
+  <li><strong>Traffic Sources</strong>: Which platform sends the most visitors?
+    <ul>
+      <li>Instagram vs Facebook vs Google Ads</li>
+    </ul>
+  </li>
+  <li><strong>Engagement</strong>: Which campaigns drive the most engagement?
+    <ul>
+      <li>Look at hero_cta_click and offer_click rates by campaign</li>
+    </ul>
+  </li>
+  <li><strong>Conversion Rate</strong>: Which campaigns convert best?
+    <ul>
+      <li>Form submissions per 100 visitors by campaign</li>
+    </ul>
+  </li>
+  <li><strong>Offer Interest</strong>: Which pricing tier is most popular?
+    <ul>
+      <li>Track offer_click events by label</li>
+    </ul>
+  </li>
+  <li><strong>Newsletter Interest</strong>: How many leads opt into newsletter?
+    <ul>
+      <li>Track newsletter_opted_in parameter in form_submission</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="optimization-based-on-data">Optimization Based on Data</h3>
+
+<ul>
+  <li><strong>Low traffic, high conversion</strong>: Increase budget on this campaign</li>
+  <li><strong>High traffic, low conversion</strong>: Improve targeting or landing page</li>
+  <li><strong>Popular offer</strong>: Consider promoting this pricing tier more</li>
+  <li><strong>High Instagram engagement</strong>: Focus more resources there</li>
+  <li><strong>Low newsletter opt-in</strong>: Consider better incentives</li>
+</ul>
+
+<h3 id="ab-testing-ideas">A/B Testing Ideas</h3>
+
+<p>Create multiple campaign URLs with different content:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>utm_content=blue_button
+utm_content=red_button
+utm_content=discount_10
+utm_content=free_trial
+</code></pre></div></div>
+
+<p>Compare which performs better!</p>
+
+<hr />
+
+<h2 id="-troubleshooting">🔍 Troubleshooting</h2>
+
+<h3 id="events-not-showing-up">Events Not Showing Up?</h3>
+<ol>
+  <li>Check browser console for errors</li>
+  <li>Verify GA Measurement ID is correct</li>
+  <li>Use <strong>DebugView</strong> in GA4 (Admin → DebugView)</li>
+  <li>Make sure ad blockers are disabled when testing</li>
+</ol>
+
+<h3 id="campaign-parameters-not-tracking">Campaign Parameters Not Tracking?</h3>
+<ol>
+  <li>Ensure UTM parameters are in the URL</li>
+  <li>Check they’re spelled correctly (lowercase recommended)</li>
+  <li>View <strong>Realtime → Event count by Event name</strong> to see campaign_visit events</li>
+</ol>
+
+<h3 id="test-your-setup">Test Your Setup</h3>
+<ol>
+  <li>Visit your site with campaign parameters</li>
+  <li>Click buttons and submit forms</li>
+  <li>Check GA4 Realtime report (within 30 seconds)</li>
+  <li>Look for your events under “Event count by Event name”</li>
+</ol>
+
+<hr />
+
+<h2 id="-pro-tips">📱 Pro Tips</h2>
+
+<ol>
+  <li>
+    <p><strong>Shorten Your URLs</strong>: Use <a href="https://bitly.com">bit.ly</a> or similar to make campaign URLs cleaner for Instagram bio/stories</p>
+  </li>
+  <li><strong>Create a Campaign Tracking Sheet</strong>: Keep a Google Sheet with:
+    <ul>
+      <li>Campaign name</li>
+      <li>URL</li>
+      <li>Platform</li>
+      <li>Start date</li>
+      <li>Budget</li>
+      <li>Goals</li>
+      <li>Performance metrics</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Set Up Weekly Reports</strong>: GA4 can email you automated reports every week</p>
+  </li>
+  <li>
+    <p><strong>Mobile vs Desktop</strong>: Check device breakdown in GA4 to optimize for your audience</p>
+  </li>
+  <li><strong>Best Posting Times</strong>: Cross-reference GA4 traffic peaks with your posting schedule</li>
+</ol>
+
+<hr />
+
+<h2 id="-next-steps">🚀 Next Steps</h2>
+
+<ol>
+  <li>Replace the placeholder Measurement ID</li>
+  <li>Deploy your site</li>
+  <li>Create your first campaign URL</li>
+  <li>Test it yourself</li>
+  <li>Launch your marketing campaigns</li>
+  <li>Monitor GA4 daily for the first week</li>
+  <li>Adjust strategy based on data</li>
+</ol>
+
+<p>Bonne chance avec Moovabb! 🎉</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
