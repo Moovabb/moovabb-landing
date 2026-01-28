@@ -48,7 +48,7 @@ Publiez vos modifications en production et vérifiez que GA fonctionne en consul
 #### 2. **offer_click**
 - Déclenché quand : L'utilisateur clique sur n'importe quel bouton "En savoir +" d'une offre
 - Catégorie : `offers`
-- Libellé : Le nom spécifique de l'offre (ex : "Avis à l'unité", "3 Avis", "6 Avis")
+- Libellé : Le nom spécifique de l'offre (ex : "Avis à l'unité", "3 Avis", "5 Avis")
 
 #### 3. **instagram_follow_click**
 - Déclenché quand : L'utilisateur clique sur le bouton Instagram

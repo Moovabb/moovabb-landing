@@ -48,7 +48,7 @@ Push your changes to production and verify GA is working by checking the "Realti
 #### 2. **offer_click**
 - Triggered when: User clicks any offer "En savoir +" button
 - Category: `offers`
-- Label: The specific offer name (e.g., "Avis à l'unité", "3 Avis", "6 Avis")
+- Label: The specific offer name (e.g., "Avis à l'unité", "3 Avis", "5 Avis")
 
 #### 3. **instagram_follow_click**
 - Triggered when: User clicks Instagram follow button
