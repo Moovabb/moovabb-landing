@@ -190,9 +190,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .top-6 {
-    top: calc(var(--spacing) * 6);
-  }
   .left-\[50\%\] {
     left: 50%;
   }
@@ -262,9 +259,6 @@
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
-  .h-16 {
-    height: calc(var(--spacing) * 16);
-  }
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
@@ -310,9 +304,6 @@
   .max-w-378 {
     max-width: calc(var(--spacing) * 378);
   }
-  .min-w-full {
-    min-width: 100%;
-  }
   .flex-1 {
     flex: 1;
   }
@@ -342,9 +333,6 @@
   }
   .justify-center {
     justify-content: center;
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -489,8 +477,11 @@
   .text-\[40px\] {
     font-size: 40px;
   }
-  .text-\[42px\] {
-    font-size: 42px;
+  .text-\[45px\] {
+    font-size: 45px;
+  }
+  .text-\[46px\] {
+    font-size: 46px;
   }
   .text-\[52px\] {
     font-size: 52px;
@@ -585,11 +576,6 @@
       outline-style: none;
     }
   }
-  .md\:-top-2 {
-    @media (width >= 48rem) {
-      top: calc(var(--spacing) * -2);
-    }
-  }
   .md\:left-20 {
     @media (width >= 48rem) {
       left: calc(var(--spacing) * 20);
@@ -608,11 +594,6 @@
   .md\:mt-6 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 6);
-    }
-  }
-  .md\:mb-4 {
-    @media (width >= 48rem) {
-      margin-bottom: calc(var(--spacing) * 4);
     }
   }
   .md\:mb-6 {
@@ -755,11 +736,6 @@
       padding-block: calc(var(--spacing) * 10);
     }
   }
-  .md\:py-12 {
-    @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 12);
-    }
-  }
   .md\:py-16 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 16);
@@ -827,29 +803,9 @@
       line-height: 1.2;
     }
   }
-  .lg\:-mt-4 {
-    @media (width >= 64rem) {
-      margin-top: calc(var(--spacing) * -4);
-    }
-  }
-  .lg\:-mt-6 {
-    @media (width >= 64rem) {
-      margin-top: calc(var(--spacing) * -6);
-    }
-  }
-  .lg\:-mt-12 {
-    @media (width >= 64rem) {
-      margin-top: calc(var(--spacing) * -12);
-    }
-  }
   .lg\:-mt-14 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * -14);
-    }
-  }
-  .lg\:-mt-16 {
-    @media (width >= 64rem) {
-      margin-top: calc(var(--spacing) * -16);
     }
   }
   .lg\:mb-4 {
@@ -960,11 +916,6 @@
   .lg\:gap-6 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 6);
-    }
-  }
-  .lg\:gap-8 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 8);
     }
   }
   .lg\:gap-15 {
