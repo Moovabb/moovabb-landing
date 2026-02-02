@@ -26,13 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const offerButtons = document.querySelectorAll('[aria-label*="En savoir plus sur l\'offre"]');
   offerButtons.forEach(button => {
     button.addEventListener('click', function (e) {
-      const offerName = this.getAttribute('aria-label').match(/offre (.+)/)?.[1] || 'Unknown';
+      // Extract offer name from the h3 title within the same article
+      const article = this.closest('article');
+      const offerName = article ? article.querySelector('h3[itemprop="name"]')?.textContent.trim() : 'Unknown';
 
       if (typeof gtag !== 'undefined') {
         gtag('event', 'offer_click', {
-          'event_category': 'offers',
-          'event_label': offerName,
-          'value': offerName
+          'event_category': offerName,
+          'event_label': 'click_button'
         });
       } else {
         console.warn('gtag is not defined');
