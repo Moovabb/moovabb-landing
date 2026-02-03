@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const offerName = article ? article.querySelector('h3[itemprop="name"]')?.textContent.trim() : 'Unknown';
 
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'offer_click', {
+        gtag('event', offerName, {
           'event_category': offerName,
           'event_label': 'click_button'
         });
